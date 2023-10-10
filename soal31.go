@@ -5,11 +5,14 @@ import (
 )
 
 func main() {
-	var inp, inp2 byte
-	var hasil bool
+	var char1, char2 byte
+	var areEqual bool
+	fmt.Scanf("%c %c", &char1, &char2)
 
-	fmt.Scanf("%c", &inp, &inp2)
-	hasil = inp == (inp2-32) || (inp-32) == inp2
-	fmt.Printf("%c", hasil)
+	char1 = fmt.Sprintf("%c", char1)[0]
+	char2 = fmt.Sprintf("%c", char2)[0]
 
+	areEqual = char1|32 == char2|32
+
+	fmt.Println(areEqual)
 }
